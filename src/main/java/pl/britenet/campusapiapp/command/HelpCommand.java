@@ -1,16 +1,27 @@
 package pl.britenet.campusapiapp.command;
 
 import pl.britenet.campusapiapp.Constants;
+import pl.britenet.campusapiapp.model.Category;
+import pl.britenet.campusapiapp.model.builder.CategoryBuilder;
 
 public class HelpCommand extends Command {
 
-    public HelpCommand() {
+    private final CommandService commandService;
+
+    public HelpCommand(CommandService commandService) {
         super(Constants.COMMAND_NAME_HELP);
+        this.commandService = commandService;
     }
 
     @Override
     public void execute() {
-        System.out.println("Helping...");
+        Category category = new CategoryBuilder()
+                .setId(1)
+                .setName("Test")
+                .getCategory();
+
+        System.out.println(category.getId() + " " + category.getName());
+
     }
 
 }

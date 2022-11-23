@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         CommandService commandService = new CommandService();
-        commandService.registerCommand(new HelpCommand());
+        commandService.registerCommand(new HelpCommand(commandService));
 
         Scanner scanner = new Scanner(System.in);
         while (isRunning) {
