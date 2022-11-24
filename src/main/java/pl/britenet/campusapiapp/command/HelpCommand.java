@@ -15,13 +15,8 @@ public class HelpCommand extends Command {
 
     @Override
     public void execute() {
-        Category category = new CategoryBuilder()
-                .setId(1)
-                .setName("Test")
-                .getCategory();
 
-        System.out.println(category.getId() + " " + category.getName());
+
 
     }
-
 }
