@@ -6,6 +6,7 @@ public final class Product {
     private String name;
     private double price;
     private int categoryId;
+    private Category category;
 
     public Product() {}
 
@@ -39,5 +40,24 @@ public final class Product {
 
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", categoryId=" + categoryId +
+                ", category=" + category +
+                '}';
     }
 }
